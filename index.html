@@ -11,8 +11,9 @@
 
 <body onload='hideTotal()'>
     <div class="container box">
+
         <div class="content">
-            <h1 class="title">Antean Studios Printing Quote Form</h1>
+            <h1 class="title is-centered">Antean Studios Printing Quote Form</h1>
         </div>
         <form action="" id="printform" onsubmit="return false;">
 
@@ -167,10 +168,10 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <div class="control">
-                            <label class='radio'><input type="radio"  name="selectedship" value="3day" onclick="calculateTotal()" />3 business days</label><br/>
-                            <label class='radio'><input type="radio"  name="selectedship" value="next" onclick="calculateTotal()" />Next business day</label><br/>
-                            <label class='radio'><input type="radio"  name="selectedship" value="today" onclick="calculateTotal()" />Ready today</label><br/>
-                            <label class='radio'><input type="radio"  name="selectedship" value="7day" onclick="calculateTotal()" />7 business day</label><br/></p>
+                            <label class='radio'><input type="radio"  name="selectedship" value="3day" onclick="calculateTotal()" /> 3 business days</label><br/>
+                            <label class='radio'><input type="radio"  name="selectedship" value="next" onclick="calculateTotal()" /> Next business day</label><br/>
+                            <label class='radio'><input type="radio"  name="selectedship" value="today" onclick="calculateTotal()" /> Ready today</label><br/>
+                            <label class='radio'><input type="radio"  name="selectedship" value="7day" onclick="calculateTotal()" /> 7 business day</label><br/></p>
 
                         </div>
                     </div>
@@ -178,13 +179,38 @@
             </div>
 
             <!-- TOTAL PRICE PLACEHOLDER -->
-            <div id="totalPrice"></div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label"></label>
+                </div>
 
-            <div class="control">
-                <button class="button is-danger is-medium is-outlined">Submit</button>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control message is-warning">
+                            <div id="totalPrice" class="message-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBMIT QUOTE BUTTON -->
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <!-- Left empty for spacing -->
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-danger">
+                      Submit Quote
+                    </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
-    </div> <!--End of container -->
+    </div>
+    <!--End of container -->
 
 </body>
 
