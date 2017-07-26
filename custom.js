@@ -6,6 +6,7 @@ print_sizes["8x11"] = 95;
 
 //Paper stock
 var stocks = new Array();
+stocks["none"] = 0;
 stocks["14"] = 10;
 stocks["16"] = 20;
 stocks["17"] = 25;
@@ -53,9 +54,8 @@ ship_locations["orlando"] = 15;
 ship_locations["miami"] = 40;
 ship_locations["atlanta"] = 55;
 
-//****** GET PRINT SIZES PRICE ******
-
-//This function finds the print size price based on the
+// ********************* GET SIZE PRICE ********************* //
+//finds the print size price based on the
 //drop down selection
 function getSizePrice() {
     var printSizePrice = 0;
@@ -67,12 +67,10 @@ function getSizePrice() {
     //For example print_sizes["4x5".value] would be equal to 5
     printSizePrice = print_sizes[selectedSize.value];
 
-    //finally we return printSizePrice
     return printSizePrice;
 }
 
-//****** GET STOCK PRICE ******
-
+// ********************* GET STOCK PRICE ********************* //
 function getStockPrice() {
     var stockPrice = 0;
     var theForm = document.forms["printform"];
@@ -83,7 +81,7 @@ function getStockPrice() {
     return stockPrice;
 }
 
-//****** GET SHIPHING PRICE // RADIO BUTTON******
+// ***************** GET SHIP OPTION PRICE // RADIO  ***************** //
 function getShipOptionsPrice() {
     var shipOptionsPrice = 0;
     //Get a reference to the form id="printform"
@@ -103,14 +101,13 @@ function getShipOptionsPrice() {
     return shipOptionsPrice;
 }
 
-
 function calculateTotal() {
-    var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice();
+    var printPrice = getShipOptionsPrice() + getSizePrice() + getStockPrice();
 
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
-    divobj.innerHTML = "Total Price For the print job $" + printPrice;
+    divobj.innerHTML = "Total Price For this print job $" + printPrice;
 
 }
 
