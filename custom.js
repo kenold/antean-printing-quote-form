@@ -98,31 +98,31 @@ function getCoatingPrice() {
     var theForm = document.forms["printform"];
     var selectedCoating = theForm.elements["coatings"];
 
-    coating = coatings[selectedCoating.value];
+    coatingPrice = coatings[selectedCoating.value];
 
     return coatingPrice;
 }
 
 // ********************* GET CORNERS PRICE ********************* //
-function getStockPrice() {
-    var stockPrice = 0;
+function getCornersPrice() {
+    var cornersPrice = 0;
     var theForm = document.forms["printform"];
-    var selectedStock = theForm.elements["stocks"];
+    var selectedCorners = theForm.elements["corners"];
 
-    stockPrice = stocks[selectedStock.value];
+    cornersPrice = corners[selectedCorners.value];
 
-    return stockPrice;
+    return cornersPrice;
 }
 
 // ********************* GET QUANTITIES PRICE ********************* //
-function getStockPrice() {
-    var stockPrice = 0;
+function getQuantitiesPrice() {
+    var quantitiesPrice = 0;
     var theForm = document.forms["printform"];
-    var selectedStock = theForm.elements["stocks"];
+    var selectedQuantity = theForm.elements["quantities"];
 
-    stockPrice = stocks[selectedStock.value];
+    quantitiesPrice = quantities[selectedQuantity.value];
 
-    return stockPrice;
+    return quantitiesPrice;
 }
 
 // ***************** GET SHIP OPTION PRICE // RADIO  ***************** //
@@ -147,7 +147,8 @@ function getShipOptionsPrice() {
 
 function calculateTotal() {
     var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice()
-        + getBackPrice();
+        + getBackPrice() + getCoatingPrice() + getCornersPrice()
+        + getQuantitiesPrice();
 
     //display the result
     var divobj = document.getElementById('totalPrice');
