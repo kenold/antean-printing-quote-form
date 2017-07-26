@@ -42,8 +42,8 @@ quantities["3000qty"] = 70;
 
 //Printing turnaround
 var ship_options = new Array();
-ship_options["3"] = 10;
-ship_options["7"] = 15;
+ship_options["3day"] = 10;
+ship_options["7day"] = 15;
 ship_options["next"] = 50;
 ship_options["today"] = 80;
 
