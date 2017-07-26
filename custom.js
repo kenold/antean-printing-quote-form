@@ -93,14 +93,14 @@ function getBackPrice() {
 }
 
 // ********************* GET COATING PRICE ********************* //
-function getStockPrice() {
-    var stockPrice = 0;
+function getCoatingPrice() {
+    var coatingPrice = 0;
     var theForm = document.forms["printform"];
-    var selectedStock = theForm.elements["stocks"];
+    var selectedCoating = theForm.elements["coatings"];
 
-    stockPrice = stocks[selectedStock.value];
+    coating = coatings[selectedCoating.value];
 
-    return stockPrice;
+    return coatingPrice;
 }
 
 // ********************* GET CORNERS PRICE ********************* //
