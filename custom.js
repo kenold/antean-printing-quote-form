@@ -31,14 +31,14 @@ corners["standard"] = 20;
 
 //Quantity
 var quantities = new Array();
-quantities["0"] = 0;
-quantities["100"] = 10;
-quantities["250"] = 20;
-quantities["500"] = 30;
-quantities["1000"] = 40;
-quantities["2000"] = 50;
-quantities["2500"] = 60;
-quantities["3000"] = 70;
+quantities["none"] = 0;
+quantities["100qty"] = 10;
+quantities["250qty"] = 20;
+quantities["500qty"] = 30;
+quantities["1000qty"] = 40;
+quantities["2000qty"] = 50;
+quantities["2500qty"] = 60;
+quantities["3000qty"] = 70;
 
 //Printing turnaround
 var ship_options = new Array();
