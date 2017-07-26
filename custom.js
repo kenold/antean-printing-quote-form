@@ -7,15 +7,15 @@ print_sizes["8x11"] = 95;
 //Paper stock
 var stocks = new Array();
 stocks["none"] = 0;
-stocks["14"] = 10;
-stocks["16"] = 20;
-stocks["17"] = 25;
+stocks["14pt"] = 10;
+stocks["16pt"] = 20;
+stocks["17pt"] = 25;
 
 //Back side
 var back_sides = new Array();
 back_sides["none"] = 0;
-back_sides["full"] = 15;
-back_sides["bw"] = 30;
+back_sides["full"] = 30;
+back_sides["bw"] = 25;
 
 //Coating
 var coatings = new Array();
@@ -81,6 +81,50 @@ function getStockPrice() {
     return stockPrice;
 }
 
+// ********************* GET BACK PRICE ********************* //
+function getBackPrice() {
+    var backPrice = 0;
+    var theForm = document.forms["printform"];
+    var selectedBack = theForm.elements["back_sides"];
+
+    backPrice = back_sides[selectedBack.value];
+
+    return backPrice;
+}
+
+// ********************* GET COATING PRICE ********************* //
+function getStockPrice() {
+    var stockPrice = 0;
+    var theForm = document.forms["printform"];
+    var selectedStock = theForm.elements["stocks"];
+
+    stockPrice = stocks[selectedStock.value];
+
+    return stockPrice;
+}
+
+// ********************* GET CORNERS PRICE ********************* //
+function getStockPrice() {
+    var stockPrice = 0;
+    var theForm = document.forms["printform"];
+    var selectedStock = theForm.elements["stocks"];
+
+    stockPrice = stocks[selectedStock.value];
+
+    return stockPrice;
+}
+
+// ********************* GET QUANTITIES PRICE ********************* //
+function getStockPrice() {
+    var stockPrice = 0;
+    var theForm = document.forms["printform"];
+    var selectedStock = theForm.elements["stocks"];
+
+    stockPrice = stocks[selectedStock.value];
+
+    return stockPrice;
+}
+
 // ***************** GET SHIP OPTION PRICE // RADIO  ***************** //
 function getShipOptionsPrice() {
     var shipOptionsPrice = 0;
@@ -102,7 +146,8 @@ function getShipOptionsPrice() {
 }
 
 function calculateTotal() {
-    var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice();
+    var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice()
+        + getBackPrice();
 
     //display the result
     var divobj = document.getElementById('totalPrice');
