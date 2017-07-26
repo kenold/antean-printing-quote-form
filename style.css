@@ -1,10 +1,9 @@
-.container {
+.container.box {
     margin-top: 30px;
 }
 
 .container div#totalPrice
 {
-    padding:10px;
     font-weight:bold;
-    color:#ff3860;
+    padding: 1em 1.25em;
 }
