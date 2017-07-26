@@ -102,7 +102,7 @@ function getShipOptionsPrice() {
 }
 
 function calculateTotal() {
-    var printPrice = getShipOptionsPrice() + getSizePrice() + getStockPrice();
+    var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice();
 
     //display the result
     var divobj = document.getElementById('totalPrice');
