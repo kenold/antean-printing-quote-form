@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Antean Studios Print Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.css">
-    <script src="custom.js" charset="utf-8"></script>
+    <script src="js/quote.js" charset="utf-8"></script>
 </head>
 
 <body onload='calculateTotal()'>
@@ -174,21 +174,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- TOTAL PRICE PLACEHOLDER -->
-            <!--div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label"></label>
-                </div>
-
-                <div class="field-body">
-                    <div class="field is-narrow">
-                        <div class="control message is-warning">
-                            <div id="totalPrice" class="message-body"></div>
-                        </div>
-                    </div>
-                </div>
-            </div -->
 
             <!-- TOTAL PRICE -->
             <div class="field is-horizontal">
