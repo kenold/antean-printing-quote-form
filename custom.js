@@ -146,10 +146,4 @@ function calculateTotal() {
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
     divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
-
-}
-
-function setDefaults() {
-    quantitiesPrice = 1500;
-    calculateTotal();
 }
