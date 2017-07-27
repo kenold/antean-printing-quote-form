@@ -13,7 +13,7 @@
 
     <div class="container box">
         <div class="content">
-            <h1 class="title is-centered">Antean Studios Printing Quote Form</h1>
+            <h1 class="title is-centered">Antean Studios Print Quote Form</h1>
         </div>
 
         <div class="columns">
@@ -253,7 +253,12 @@
             </div>
 
             <div class="column">
-                Second column
+                <div class="content">
+                    <p class="subtitle is-4">Debug for Testing</p>
+                </div>
+                <div id="debug">
+
+                </div>
             </div>
         </div> <!-- columns -->
     </div>     <!--End of container -->
