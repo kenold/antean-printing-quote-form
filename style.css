@@ -7,3 +7,11 @@
     font-weight:bold;
     padding: 1em 1.25em;
 }
+
+input.input[disabled], .textarea[disabled] {
+    background-color: #fff;
+    border-color: #fff;
+    -webkit-box-shadow: none;
+    cursor: auto;
+    color: #363636;
+}
