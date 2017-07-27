@@ -17,8 +17,8 @@ back_sides["bw"] = 25;
 
 //Coating
 var coatings = new Array();
-coatings["high"] = 98;
-coatings["matt"] = 120;
+coatings["high"] = 0.15;
+coatings["matt"] = 0.30;
 
 //Corner
 var corners = new Array();
@@ -139,21 +139,22 @@ function getShipOptionsPrice() {
 
 function calculateTotal() {
     var printPrice = getSizePrice() + getStockPrice() + getShipOptionsPrice()
-        + getBackPrice() + getCoatingPrice() + getCornersPrice()
+        + getBackPrice() + getCornersPrice()
         + getQuantitiesPrice();
+
+    var quoteTotal = (printPrice * getCoatingPrice()) + printPrice;
 
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
 
-    //divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
-    divobj.value='$' + printPrice;
+    divobj.value='$' + quoteTotal;
 
     //to use in submitForm below
-    return printPrice;
+    return quoteTotal;
 }
 
 function submitQuote() {
-    var quoteTotal = calculateTotal();
-    window.location.href = "quote-success.php?total=" + quoteTotal;
+    //var quoteTotal = calculateTotal();
+    //window.location.href = "quote-success.php?total=" + quoteTotal;
 }
