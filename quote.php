@@ -253,7 +253,7 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <button class="button is-danger" onclick="submitForm()">
+                            <button class="button is-danger" onclick="submitQuote()">
                                 Submit Quote
                             </button>
                         </div>

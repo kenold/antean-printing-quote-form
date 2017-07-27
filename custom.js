@@ -153,8 +153,7 @@ function calculateTotal() {
     return printPrice;
 }
 
-function submitForm() {
-    var quotePrice = calculateTotal();
-    document.getElementById('full-color').value=quotePrice;
-    //window.location.href = "quote-success.php?total=" + quotePrice;
+function submitQuote() {
+    var quoteTotal = calculateTotal();
+    window.location.href = "quote-success.php?total=" + quoteTotal;
 }
