@@ -254,7 +254,7 @@
 
             <div class="column">
                 <div class="content">
-                    <p class="subtitle is-4">Debug for Testing</p>
+                    <p class="subtitle is-4">Debug for Testing Only</p>
                 </div>
                 <div id="debug">
 
