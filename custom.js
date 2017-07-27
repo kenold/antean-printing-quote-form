@@ -145,11 +145,16 @@ function calculateTotal() {
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
-    divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
+
+    //divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
+    divobj.value='$' + printPrice;
+
+    //to use in submitForm below
     return printPrice;
 }
 
 function submitForm() {
     var quotePrice = calculateTotal();
-    window.location.href = "quote-success.php?total=" + quotePrice;
+    document.getElementById('full-color').value=quotePrice;
+    //window.location.href = "quote-success.php?total=" + quotePrice;
 }
