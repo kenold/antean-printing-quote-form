@@ -67,7 +67,7 @@
                 <div class="field-body">
                     <div class="field is-narrow">
                         <div class="control">
-                            <input class="input" type="text" value="Full Color" disabled>
+                            <input id="full-color" class="input" type="text" value="Full Color" disabled>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
             </div>
 
             <!-- TOTAL PRICE PLACEHOLDER -->
-            <div class="field is-horizontal">
+            <!--div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label"></label>
                 </div>
@@ -185,6 +185,21 @@
                     <div class="field is-narrow">
                         <div class="control message is-warning">
                             <div id="totalPrice" class="message-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div -->
+
+            <!-- TOTAL PRICE -->
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">TOTAL</label>
+                </div>
+
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <input id="totalPrice" class="input is-danger" type="text" value="" disabled>
                         </div>
                     </div>
                 </div>
