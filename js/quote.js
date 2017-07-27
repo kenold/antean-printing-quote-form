@@ -148,7 +148,7 @@ function calculateTotal() {
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
 
-    divobj.value='$' + quoteTotal;
+    divobj.value='$' + quoteTotal + ' (coating: ' + getCoatingPrice()*100 + '%)';
 
     //to use in submitForm below
     return quoteTotal;
