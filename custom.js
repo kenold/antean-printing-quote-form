@@ -146,4 +146,10 @@ function calculateTotal() {
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
     divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
+    return printPrice;
+}
+
+function submitForm() {
+    var quotePrice = calculateTotal();
+    window.location.href = "quote-success.php?total=" + quotePrice;
 }
