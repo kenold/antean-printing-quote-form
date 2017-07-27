@@ -28,8 +28,7 @@
                         <div class="control">
                             <div class="select">
                                 <select id="print_sizes" name='print_sizes' onchange="calculateTotal()">
-                                    <option value="none">Select a print size</option>
-                                    <option value="4x5">4.25x5.5</option>
+                                    <option value="4x5" selected>4.25x5.5</option>
                                     <option value="8x11">8.5x11</option>
                                 </select>
                             </div>
@@ -49,8 +48,7 @@
                         <div class="control">
                             <div class="select">
                                 <select id="stocks" name='stocks' onchange="calculateTotal()">
-                                    <option value="none">Select a stock</option>
-                                    <option value="14pt">14pt</option>
+                                    <option value="14pt" selected>14pt</option>
                                     <option value="16pt">16pt</option>
                                     <option value="17pt">17pt</option>
                                 </select>
@@ -83,10 +81,10 @@
                         <div class="control">
                             <div class="select">
                                 <select id="back_sides" name='back_sides' onchange="calculateTotal()">
-                        <option value="none">No printing</option>
-                        <option value="full">Full color</option>
-                        <option value="bw">Black and White</option>
-                    </select>
+                                    <option value="noprint">No Printing</option>
+                                    <option value="full" selected>Full color</option>
+                                    <option value="bw">Black and White</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -94,7 +92,6 @@
             </div>
 
             <!-- COATING -->
-
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Coating</label>
@@ -105,10 +102,9 @@
                         <div class="control">
                             <div class="select">
                                 <select id="coatings" name='coatings' onchange="calculateTotal()">
-                        <option value="none">Select coating</option>
-                        <option value="high">High UV Gloss</option>
-                        <option value="matt">Matt both side</option>
-                    </select>
+                                    <option value="high" selected>High UV Gloss</option>
+                                    <option value="matt">Matt both side</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -127,10 +123,9 @@
                             <div class="select">
 
                                 <select id="corners" name='corners' onchange="calculateTotal()">
-                        <option value="none">None</option>
-                        <option value="rounded">Rounded</option>
-                        <option value="standard">Standard</option>
-                    </select>
+                                    <option value="rounded">Rounded</option>
+                                    <option value="standard" selected>Standard</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -148,12 +143,11 @@
                         <div class="control">
                             <div class="select">
                                 <select id="quantities" name='quantities' onchange="calculateTotal()">
-                        <option value="none">Select quantity</option>
-                        <option value="1000qty">1000</option>
-                        <option value="2000qty">2000</option>
-                        <option value="2500qty">2500</option>
-                        <option value="3000qty">3000</option>
-                    </select>
+                                    <option value="1000qty" selected>1000</option>
+                                    <option value="2000qty">2000</option>
+                                    <option value="2500qty">2500</option>
+                                    <option value="3000qty">3000</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -170,7 +164,7 @@
                     <div class="field is-narrow">
                         <div class="control">
                             <label class='radio'><input type="radio"  name="selectedship" value="3day" onclick="calculateTotal()" /> 3 business days</label><br/>
-                            <label class='radio'><input type="radio"  name="selectedship" value="next" onclick="calculateTotal()" /> Next business day</label><br/>
+                            <label class='radio'><input type="radio"  name="selectedship" value="next" checked onclick="calculateTotal()" /> Next business day</label><br/>
                             <label class='radio'><input type="radio"  name="selectedship" value="today" onclick="calculateTotal()" /> Ready today</label><br/>
                             <label class='radio'><input type="radio"  name="selectedship" value="7day" onclick="calculateTotal()" /> 7 business day</label><br/></p>
 

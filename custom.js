@@ -1,40 +1,32 @@
 //Print sizes
 var print_sizes = new Array();
-print_sizes["none"] = 0;
-print_sizes["4x5"] = 0;
-print_sizes["8x11"] = 0;
+print_sizes["4x5"] = 30;
+print_sizes["8x11"] = 45;
 
 //Paper stock
 var stocks = new Array();
-stocks["none"] = 0;
 stocks["14pt"] = 10;
 stocks["16pt"] = 20;
 stocks["17pt"] = 25;
 
 //Back side
 var back_sides = new Array();
-back_sides["none"] = 0;
+back_sides["noprint"] = 0;
 back_sides["full"] = 30;
 back_sides["bw"] = 25;
 
 //Coating
 var coatings = new Array();
-coatings["none"] = 0;
 coatings["high"] = 98;
 coatings["matt"] = 120;
 
 //Corner
 var corners = new Array();
-corners["none"] = 0;
 corners["rounded"] = 25;
 corners["standard"] = 20;
 
 //Quantity
 var quantities = new Array();
-quantities["none"] = 0;
-quantities["100qty"] = 10;
-quantities["250qty"] = 20;
-quantities["500qty"] = 30;
 quantities["1000qty"] = 40;
 quantities["2000qty"] = 50;
 quantities["2500qty"] = 60;
