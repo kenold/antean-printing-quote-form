@@ -145,7 +145,7 @@ function calculateTotal() {
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
-    divobj.innerHTML = "Total Price For this print job: $" + printPrice;
+    divobj.innerHTML = "Total Pricing Quote: $" + printPrice;
 
 }
 
