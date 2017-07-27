@@ -169,7 +169,7 @@ function calculateTotal() {
         + 'Corner: $' + corner + '<br>'
         + 'Qty: $' + qty + '<br>'
         + 'Turnaround: $' + ship + '<br>'
-            + '<hr><br>'
+            + '<hr>'
         + 'Sub-Total (' + coating + '% coating not included): $' + printPrice;
     // end debug
 
