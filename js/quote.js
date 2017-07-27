@@ -15,10 +15,11 @@ back_sides["noprint"] = 0;
 back_sides["full"] = 30;
 back_sides["bw"] = 25;
 
-//Coating
+//Coating  percentage values only
+//Ex. for 15%, type 15
 var coatings = new Array();
-coatings["high"] = 0.15;
-coatings["matt"] = 0.30;
+coatings["high"] = 15;
+coatings["matt"] = 30;
 
 //Corner
 var corners = new Array();
@@ -142,17 +143,41 @@ function calculateTotal() {
         + getBackPrice() + getCornersPrice()
         + getQuantitiesPrice();
 
-    var quoteTotal = (printPrice * getCoatingPrice()) + printPrice;
+    var quoteTotal = (printPrice * (getCoatingPrice()/100)) + printPrice;
 
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display = 'block';
 
-    divobj.value='$' + quoteTotal + ' (coating: ' + getCoatingPrice()*100 + '%)';
+    divobj.value='$' + quoteTotal;
+
+    //for debug only
+    //TODO: remove this section on production
+    var size = getSizePrice();
+    var stock = getStockPrice();
+    var back = getBackPrice();
+    var coating = getCoatingPrice();
+    var corner = getCornersPrice();
+    var qty = getQuantitiesPrice();
+    var ship = getShipOptionsPrice();
+
+    var debug_msg = document.getElementById('debug');
+    debug_msg.innerHTML = 'Size: $' + size + '<br>'
+        + 'Stock: $' + stock + '<br>'
+        + 'Back Side: $' + back + '<br>'
+        + 'Coating: ' + coating + '%' + '<br>'
+        + 'Corner: $' + corner + '<br>'
+        + 'Qty: $' + qty + '<br>'
+        + 'Turnaround: $' + ship + '<br>'
+            + '<hr><br>'
+        + 'Sub-Total (' + coating + '% coating not included): $' + printPrice;
+    // end debug
+
 
     //to use in submitForm below
     return quoteTotal;
 }
+
 
 function submitQuote() {
     //var quoteTotal = calculateTotal();
