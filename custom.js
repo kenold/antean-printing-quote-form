@@ -1,8 +1,8 @@
 //Print sizes
 var print_sizes = new Array();
 print_sizes["none"] = 0;
-print_sizes["4x5"] = 20;
-print_sizes["8x11"] = 95;
+print_sizes["4x5"] = 0;
+print_sizes["8x11"] = 0;
 
 //Paper stock
 var stocks = new Array();
@@ -157,7 +157,7 @@ function calculateTotal() {
 
 }
 
-function hideTotal() {
-    var divobj = document.getElementById('totalPrice');
-    divobj.style.display = 'none';
+function setDefaults() {
+    quantitiesPrice = 1500;
+    calculateTotal();
 }
